@@ -55,6 +55,12 @@ font
 .align-item {
   justify-content: center;
 }
+.pdt-10 {
+  padding-top: 10px;
+}
+.pdb-10 {
+  padding-bottom: 10px;
+}
 
 /* Main */
 /* 

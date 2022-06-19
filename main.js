@@ -56,10 +56,10 @@ menuItems.forEach((menuItem) => {
     var isParentMenu =
       menuItem.nextElementSibling &&
       menuItem.nextElementSibling.classList.contains("subnav");
-    console.log(isParentMenu);
+    // console.log(isParentMenu);
     isParentMenu
       ? (header.style.height = "auto")
       : (header.style.height = null);
-    console.log(menuItem);
+    // console.log(menuItem);
   });
 });

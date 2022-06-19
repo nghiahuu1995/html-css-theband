@@ -4,6 +4,12 @@
   }
 }
 @media (max-width: 1023px) {
+  #footer a {
+    padding: 0 5px;
+  }
+  #footer > a > i {
+    font-size: 25px;
+  }
 }
 @media (max-width: 740px) {
   .s-full-width,
