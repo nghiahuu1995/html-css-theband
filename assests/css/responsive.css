@@ -3,7 +3,8 @@
     display: none;
   }
 }
-
+@media (max-width: 1023px) {
+}
 @media (max-width: 740px) {
   .s-full-width,
   .s-col-full {
