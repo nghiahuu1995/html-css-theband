@@ -1,0 +1,570 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-family: Helvetica, Arial, sans-serif;
+  scroll-behavior: smooth;
+}
+/* Vị trí
+kích thước
+font
+ */
+
+/* common */
+.clear {
+  clear: both;
+}
+.text-white {
+  color: #fff !important;
+}
+.row {
+  margin-left: -8px;
+  margin-right: -8px;
+}
+.row::after {
+  content: "";
+  display: inline-block;
+  clear: both;
+}
+.col {
+  float: left;
+  padding-right: 8px;
+  padding-left: 8px;
+}
+.col-half {
+  width: 50%;
+}
+.col-third {
+  width: 33.33333%;
+}
+
+.col-full {
+  width: 100%;
+}
+.mt-16 {
+  margin-top: 16px;
+}
+.margin-top-btm-8 {
+  padding-bottom: 8px;
+}
+.text-center {
+  text-align: center;
+}
+.align-item {
+  justify-content: center;
+}
+
+/* Main */
+/* 
+#main {
+} */
+
+#header {
+  position: fixed;
+  height: 46px;
+  background-color: #000;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+#header .mobile-menu-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+#nav {
+  display: inline-block;
+}
+#nav,
+.subnav {
+  list-style-type: none;
+}
+#nav .nav-arrow-down {
+  font-size: 0.5rem;
+  position: absolute;
+  top: 50%;
+  transform: translate(50%, -50%);
+}
+#nav > li {
+  display: inline-block;
+}
+#nav li {
+  position: relative;
+}
+
+#nav li a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  line-height: 46px;
+  padding: 0px 24px;
+  text-transform: uppercase;
+}
+#nav > li > a {
+  color: whitesmoke;
+}
+#nav .subnav li:hover a,
+#nav > li:hover > a {
+  color: #000;
+  background-color: rgb(158, 158, 158);
+}
+
+#nav .subnav {
+  display: none;
+  position: absolute;
+  top: 100%;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 0 10px rgb(0, 0, 0);
+}
+
+#nav li:hover .subnav {
+  display: block;
+}
+
+#nav .subnav a {
+  color: #000;
+  padding: 0px 14px;
+  line-height: 38px;
+}
+
+.subnav > li:hover {
+  background-color: #333;
+}
+
+#header .mobile-menu-btn,
+#header .search-button {
+  float: right;
+  padding: 0 21px;
+}
+#header .mobile-menu-btn:hover {
+  background-color: #ccc;
+}
+#header .search-button:hover {
+  background-color: rgb(158, 39, 39);
+  cursor: pointer;
+}
+#header .menu-icon,
+#header .search-icon {
+  color: #fff;
+  font-size: 20px;
+  line-height: 46px;
+}
+#header.show-menu {
+  height: auto;
+}
+#header.hide-menu {
+  height: 46px;
+}
+
+#slider {
+  position: relative;
+  margin-top: 46px;
+  /* min-height: 500px;
+  background-color: #333; */
+  background-color: aqua;
+  padding-top: 50%;
+  background: url(https://www.w3schools.com/w3images/chicago.jpg) center / cover
+    no-repeat;
+}
+
+.text-content {
+  position: absolute;
+  bottom: 0;
+  color: rgb(255, 255, 255);
+  width: 100%;
+  text-align: center;
+  padding: 32px 16px;
+}
+.text-content::after {
+  content: "";
+  clear: both;
+}
+
+.text-heading {
+  font-weight: 500;
+  font-size: 24px;
+}
+
+.text-description {
+  margin-top: 25px;
+  font-size: 15px;
+}
+#content {
+  /* max-width: 980px; */
+  margin-left: auto;
+  margin-right: auto;
+}
+.main-content {
+  margin-right: 0;
+}
+.tourdate-container {
+  background-color: #000;
+}
+
+#content .content-section,
+.tourdate-info {
+  /* position: absolute;
+  left: 50%;
+  transform: translateX(-50%); */
+  margin-left: auto;
+  margin-right: auto;
+  width: 800px;
+  max-width: 100%;
+  padding: 64px 0px;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+#content .section-heading {
+  font-size: 30px;
+  font-weight: 500;
+  text-transform: uppercase;
+  /* margin: 10px 0px; */
+  text-align: center;
+  letter-spacing: 4px;
+}
+#content .section-subheading {
+  font-style: italic;
+  font-family: "Lato", sans-serif;
+  opacity: 0.6;
+}
+#content .section-subheading,
+#content .about-text {
+  margin: 10px 0px;
+  font-size: 15px;
+}
+
+#content .section-heading,
+#content .section-subheading {
+  text-align: center;
+  margin: 20px 0px;
+}
+#content .about-text {
+  line-height: 1.5;
+}
+#content .members-list {
+  margin-top: 32px;
+}
+
+#content .member-name {
+  font-size: 15px;
+  text-align: center;
+}
+
+#content .member-img {
+  margin-top: 15px;
+  width: 154px;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+.tour-section {
+  width: 100vw;
+}
+.tourdate-info {
+  padding: 64px 16px;
+
+  width: 800px;
+  max-width: 100%;
+}
+
+.tourdate-info .tourdate-heading,
+.tourdate-info .tourdate-sub-heading {
+  margin: 15px auto;
+  text-align: center;
+}
+.tourdate-info .tourdate-heading {
+  font-weight: 500;
+  letter-spacing: 5px;
+}
+
+.tourdate-info .tourdate-sub-heading {
+  font-family: "Lato", sans-serif;
+  font-style: italic;
+  margin-bottom: 15px;
+}
+.tickets-list {
+  /* margin-top: 15px; */
+  background-color: rgb(255, 255, 255);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.tourdate-info .ticket-date {
+  border: 0.5px solid rgb(153, 153, 153);
+  padding: 10px;
+  color: #757575;
+  list-style-type: none;
+}
+.ticket-date span.quantity {
+  float: right;
+  width: 24px;
+  height: 24px;
+  text-align: center;
+  background-color: rgb(0, 0, 0);
+  color: #ffffff;
+  border-radius: 100%;
+  margin-top: -3px;
+  line-height: 24px;
+}
+.ticket-date span.sold-out {
+  background-color: #f44336;
+  padding: 5px;
+  margin: 0 10px;
+  color: #fff;
+}
+
+/* places */
+.place-list {
+  /* background-color: rgb(255, 255, 255); */
+  margin-top: 16px;
+}
+
+.place-item {
+  width: calc(100% / 3);
+}
+
+.place-img {
+  width: 100%;
+  display: block;
+}
+
+.place-body {
+  background-color: #fff;
+
+  padding: 20px;
+}
+/* .place {
+  background-color: #fff;
+  margin-top: -5px;
+  height: 300px;
+  color: #333;
+  padding: 20px;
+  line-height: 1.5;
+} */
+.place-heading {
+  font-family: "Lato", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+}
+.place-time {
+  margin: 20px 0;
+  opacity: 0.7;
+  font-weight: 200;
+}
+.place-desc {
+  margin: 20px 0;
+}
+.btn {
+  background-color: #000000;
+  padding: 0 15px;
+  line-height: 3;
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+}
+.btn:hover {
+  opacity: 0.6;
+}
+
+.modal {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  display: none;
+}
+.tickets-modal {
+  position: relative;
+
+  background-color: #ccc;
+  margin: auto;
+  max-width: 900px;
+}
+
+.modal.open {
+  display: block;
+  animation-name: modal-animation;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+@keyframes modal-animation {
+  from {
+    padding-top: 0;
+  }
+  to {
+    padding-top: 15%;
+  }
+}
+span.modal-closebtn {
+  right: 0;
+  margin: 10px;
+  cursor: pointer;
+  float: right;
+}
+.modal-heading {
+  text-align: center;
+  background-color: #009688;
+  font-size: 30px;
+  font-weight: 300;
+  letter-spacing: 3px;
+  padding: 32px 16px;
+  color: #fff;
+}
+
+.modal-body,
+.modal-footer {
+  padding: 20px;
+}
+.modal-pay-button {
+  color: #fff;
+  background-color: #009688;
+  width: 100%;
+  padding: 20px 0;
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 20px;
+  cursor: pointer;
+  margin-top: -27px;
+  border: none;
+}
+
+.tickets-quantity,
+.where-to-send {
+  width: 100%;
+  padding: 10px;
+  margin: 15px 0;
+}
+.close-btn {
+  padding: 10px 15px;
+  background-color: #f44336;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.close-btn:hover,
+.modal-pay-button:hover {
+  background-color: #ccc;
+  color: #000;
+  border: 1px solid #000;
+}
+
+.ti-close {
+  font-size: 10px;
+}
+.help {
+  float: right;
+}
+.contact-container {
+  padding: 64px 16px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.contact-heading,
+.contact-note {
+  text-align: center;
+  margin: 10px;
+}
+.contact-heading {
+  font-size: 40px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+.contact-note {
+  opacity: 0.6;
+  font-style: italic;
+}
+
+.form-contact {
+  padding: 32px 0;
+}
+
+.contact-info,
+.submit-form {
+  float: left;
+  width: 50%;
+}
+
+submit-container::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+.contact-place,
+.contact-phone,
+.contact-email {
+  margin: 10px 0;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.name-email-container {
+  margin: 0 -16px 8px -16px;
+  padding: 0 8px;
+}
+.half {
+  width: 50%;
+  float: left;
+  padding: 0 8px;
+}
+.submit-name,
+.submit-email,
+.submit-message {
+  border: 1px solid grey;
+  padding: 8px;
+  /* margin: 5px 0; */
+  line-height: 2;
+  width: 100%;
+}
+
+.submit-message {
+  width: 100%;
+}
+
+button.contact-send {
+  background-color: #000;
+  color: rgb(255, 255, 255);
+  margin-top: 20px;
+  /* margin-right: 8px; */
+  padding: 10px 15px;
+  float: right;
+  cursor: pointer;
+}
+button.contact-send:hover {
+  background-color: #ccc;
+  padding: 10px 15px;
+}
+.ti-location-pin,
+.ti-headphone,
+.ti-email {
+  padding-right: 20px;
+}
+.content-background .background-img {
+  width: 100%;
+}
+
+#footer {
+  text-align: center;
+  margin: 50px auto;
+}
+#footer > i {
+  font-size: 25px;
+  opacity: 0.7;
+}
+#footer > a {
+  text-decoration: none;
+}
+#footer > a:visited {
+  text-decoration: none;
+}
+.copyright {
+  margin-top: 20px;
+}
